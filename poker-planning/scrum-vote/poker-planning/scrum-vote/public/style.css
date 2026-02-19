@@ -1,0 +1,177 @@
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --text: #1f2937;
+  --border: #d1d5db;
+  --primary: #0f766e;
+  --primary-hover: #115e59;
+  --danger: #b91c1c;
+  --danger-hover: #991b1b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f4f6f8 0%, #e6edf4 100%);
+  color: var(--text);
+}
+
+.container {
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 0 16px 30px;
+}
+
+h1 {
+  margin-bottom: 16px;
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 1rem;
+}
+
+.hint {
+  margin: 8px 0 0;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.vote-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+button.ghost {
+  margin-top: 10px;
+  background: #1d4ed8;
+}
+
+button.ghost:hover {
+  background: #1e40af;
+}
+
+button.secondary {
+  background: #374151;
+}
+
+button.secondary:hover {
+  background: #1f2937;
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+button.danger:hover {
+  background: var(--danger-hover);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+#results ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.result-card {
+  border: 1px solid #c7d2fe;
+  border-radius: 10px;
+  padding: 10px;
+  background: #eef2ff;
+}
+
+.result-vote {
+  margin: 0 0 6px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1e3a8a;
+}
+
+.result-count {
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.result-bar {
+  height: 8px;
+  border-radius: 999px;
+  background: #cbd5e1;
+  overflow: hidden;
+}
+
+.result-bar span {
+  display: block;
+  height: 100%;
+  background: #0f766e;
+}
+
+.result-percent {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+#participants ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+#average {
+  font-weight: 800;
+  margin: 12px 0 0;
+  font-size: 1.2rem;
+  color: #0f766e;
+}
+
+@media (max-width: 640px) {
+  .actions {
+    flex-direction: column;
+  }
+}

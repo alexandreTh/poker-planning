@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrum Vote Anonyme</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Scrum Vote Anonyme</h1>
+
+      <section class="panel">
+        <label for="firstName">Votre prenom</label>
+        <input id="firstName" type="text" placeholder="Ex: Lea" maxlength="30" />
+        <button id="registerBtn" class="ghost">Je rejoins la session</button>
+        <p class="hint">Le prenom sert juste a vous identifier pour voter une seule fois. Le reveal reste anonyme.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Participants</h2>
+        <div id="participants"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Voter</h2>
+        <div id="voteButtons" class="vote-grid"></div>
+      </section>
+
+      <section class="panel actions">
+        <button id="revealBtn" class="secondary">Reveal manuel (optionnel)</button>
+        <button id="resetBtn" class="danger">Reset le vote en cours</button>
+      </section>
+
+      <section class="panel">
+        <h2>Etat</h2>
+        <p id="status">Chargement...</p>
+        <div id="results"></div>
+        <p id="average"></p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
